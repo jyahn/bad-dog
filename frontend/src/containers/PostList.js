@@ -15,10 +15,10 @@ class PostList extends Component {
   render() {
     console.log("props in postlist", this.props)
     return (
-      <div className="postsContainer row">
+      <div className="postContainer row">
         {this.props.titles.map(title => (
           <Fragment>
-            <div className="post">
+            <div key = {title.id} className="post col">
               <div className="title">
                 <h4>{title.title}</h4>
               </div>

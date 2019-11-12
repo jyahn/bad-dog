@@ -20,7 +20,7 @@ class PostList extends Component {
           <Fragment>
             <div className="post">
               <div className="title">
-                <h2>{title.title}</h2>
+                <h4>{title.title}</h4>
               </div>
               <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} />
               <h5>{title.description}</h5>

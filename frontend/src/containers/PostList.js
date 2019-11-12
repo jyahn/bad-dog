@@ -17,15 +17,25 @@ class PostList extends Component {
     return (
       <div className="postContainer row">
         {this.props.titles.map(title => (
-          <Fragment>
-            <div key = {title.id} className="post col">
-              <div className="title">
-                <h4>{title.title}</h4>
+          <div key={title.id} className="post col">
+            <div className="card text-center">
+              <div className="card-body">
+                <div className="card-title">
+                  <Link to={"/" + title.id}>{title.title}</Link>
+                </div>
+                <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} />
+                <div className="card-text">
+                  <i>{title.description}</i>
+                </div>
               </div>
-              <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} />
-              <h5>{title.description}</h5>
+              <div className="card-footer">
+                <small>{title.votes} votes</small>
+                <i className="fas fa-thumbs-up text-success ml-2" />
+                <i className="fas fa-thumbs-down text-danger ml-2" />
+              </div>
             </div>
-          </Fragment>
+          </div>
+
         ))}
       </div>
     );
@@ -44,3 +54,11 @@ export default connect(
 )(PostList);
 
 {/* <img className="dogPic" src={title.dog_pic} /> */ }
+
+{/* <div key={title.id} className="post col">
+  <div className="title">
+    <h4>{title.title}</h4>
+  </div>
+  <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} />
+  <h5>{title.description}</h5>
+</div> */}

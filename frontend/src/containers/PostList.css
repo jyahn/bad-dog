@@ -9,32 +9,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin: 0 auto;
 }
 
 .title {
-  width: 300px;
   word-wrap: break-word;
 }
-
-
-/* .postsContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-} */
-
-/* .picContainer {
-  width: 700px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  margin: 10px 10px 10px 10px;
-}
-
-.picContainer img {
-  flex-shrink: 0;
-  min-width: 100%;
-  min-height: 100%;
-} */

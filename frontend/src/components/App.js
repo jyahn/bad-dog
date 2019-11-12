@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Route, Switch, NavLink } from "react-router-dom";
 import Home from './Home';
 import './App.css';
+import NewPost from '../containers/NewPost';
 
 class App extends Component {
   render() {
@@ -19,8 +20,8 @@ class App extends Component {
         </div>
         <div>
           <Switch>
-            {/* <Route exact path="/new"
-            render={(props) => <NewPost {...props} />} /> */}
+            <Route exact path="/new"
+              render={(props) => <NewPost {...props} />} />
             <Route exact path="/"
               render={() => <Home />} />
             {/* <Route exact path="/:postId"

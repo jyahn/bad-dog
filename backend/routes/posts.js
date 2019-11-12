@@ -102,12 +102,12 @@ router.post("/:id/vote/:direction", async function (req, res, next) {
 
 router.post("/", async function (req, res, next) {
   try {
-    const { title, body, description } = req.body;
+    const { title, description, dog_pic } = req.body;
     const result = await db.query(
-      `INSERT INTO posts (title, description, body) 
+      `INSERT INTO posts (title, description, dog_pic) 
         VALUES ($1, $2, $3) 
-        RETURNING id, title, description, body, votes`,
-      [title, description, body]);
+        RETURNING id, title, description, dog_pic, votes`,
+      [title, description, dog_pic]);
     return res.status(201).json(result.rows[0]);
   } catch (err) {
     return next(err);

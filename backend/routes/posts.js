@@ -24,6 +24,7 @@ router.get("/", async function (req, res, next) {
       `SELECT p.id,
               p.title,
               p.description,
+              p.dog_pic,
               p.votes
       FROM posts p 
       ORDER BY p.id

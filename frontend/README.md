@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bad Dog 
 
-## Available Scripts
+My team and I built the frontend for this app using React (CRA setup), Redux, and Redux Thunk. The goal was to create an app that has a fundamentally sound component heirarchy. Another goal was to intelligently connect components to redux to prop drilling
 
-In the project directory, you can run:
+## Table of Contents
 
-### `yarn start`
+- [Installation](#installation)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Features to add](#features-to-add)
+- [Team](#team)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+### Backend Setup:  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```shell
+cd backend
+npm install
+node server.js
+```
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend Setup:
 
-### `yarn build`
+```shell
+cd frontend
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Clone
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Clone this repo to your local machine using `https://github.com/jyahn/bad-dog`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Users can create a post of their dog by submitting an image, a title, and a caption (optional)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Technologies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- React
+- Create-React-App
+- Redux 
+- Redux Thunk
+- Axios 
+- Bootstrap
 
-## Learn More
+--- 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features to add
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add auth to backend for signup/login functionality
 
-### Code Splitting
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Team
 
-### Analyzing the Bundle Size
+| **Jooyoung Ahn**
+| <a href="https://github.com/jyahn" target="_blank">`github.com/jyahn`</a> | 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+| **Silas Burger**
+| <a href="https://github.com/dtkhuong" target="_blank">`github.com/dtkhuong`</a> | 
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -62,7 +62,7 @@ npm start
 | **Jooyoung Ahn**
 | <a href="https://github.com/jyahn" target="_blank">`github.com/jyahn`</a> | 
 
-| **Silas Burger**
+| **Diana Khuong**
 | <a href="https://github.com/dtkhuong" target="_blank">`github.com/dtkhuong`</a> | 
 
 

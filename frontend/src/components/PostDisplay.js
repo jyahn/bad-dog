@@ -1,11 +1,20 @@
 import React, { Component } from "react";
+import './PostDisplay.css'
 
 class PostDisplay extends Component {
   constructor(props) {
     super(props);
+    this.doVoteUp = this.doVoteUp.bind(this);
+    this.doVoteDown = this.doVoteDown.bind(this);
   }
 
+  doVoteUp() {
+    this.props.handleVote("up");
+  }
 
+  doVoteDown() {
+    this.props.handleVote("down");
+  }
 
   render() {
     const { title, description, dog_pic, votes } = this.props.post;
@@ -23,19 +32,20 @@ class PostDisplay extends Component {
           </div>
           <div className="card-footer">
             <small>{votes} votes</small>
-            <i className="fas fa-thumbs-up text-success ml-2" />
-            <i className="fas fa-thumbs-down text-danger ml-2" />
+            <i className="fas fa-thumbs-up text-success ml-2" onClick={this.doVoteUp} />
+            <i className="fas fa-thumbs-down text-danger ml-2" onClick={this.doVoteDown} />
           </div>
         </div>
         <br />
-        <div className="PostDisplay-right">
+        {/* Edit a post */}
+        {/* <div className="PostDisplay-right">
           <div className="PostDisplay-edit-area">
             <i className="fas fa-edit text-primary"
               onClick={this.props.toggleEdit} />
             <i className="fas fa-times text-danger"
               onClick={this.props.delete} />
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

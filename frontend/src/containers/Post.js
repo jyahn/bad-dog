@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import {
   getPostFromAPI,
   sendCommentToAPI,
-  removeCommentFromAPI
+  removeCommentFromAPI,
+  sendVoteToAPI
 } from '../actions/posts';
 import PostDisplay from '../components/PostDisplay';
 import CommentList from '../components/CommentList';
@@ -17,6 +18,7 @@ class Post extends Component {
 
     this.addComment = this.addComment.bind(this);
     this.deleteComment = this.deleteComment.bind(this);
+    this.vote = this.vote.bind(this);
   }
 
   async componentDidMount() {
@@ -33,6 +35,10 @@ class Post extends Component {
     this.props.removeCommentFromAPI(this.props.post.id, commentId);
   }
 
+  vote(direction) {
+    this.props.sendVoteToAPI(this.props.post.id, direction)
+  }
+
   render() {
     const post = this.props.post;
     if (!post) return <p>Loading</p>;
@@ -40,7 +46,7 @@ class Post extends Component {
 
     return (
       <div className="Post">
-        <PostDisplay post={post} />
+        <PostDisplay post={post} handleVote={this.vote} />
         <section className="Post-comments mb-4">
           <h4>Comments</h4>
           <CommentList comments={post.comments} deleteComment={this.deleteComment} />
@@ -66,6 +72,7 @@ export default connect(
   {
     getPostFromAPI,
     sendCommentToAPI,
-    removeCommentFromAPI
+    removeCommentFromAPI,
+    sendVoteToAPI
   }
 )(Post);

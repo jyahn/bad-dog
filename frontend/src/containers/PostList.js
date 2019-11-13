@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchTitlesFromAPI } from '../actions/titles';
 import { Link } from 'react-router-dom';
 import './PostList.css'
+import { sendVoteToAPI } from '../actions/posts';
 
 
 
@@ -12,6 +13,12 @@ class PostList extends Component {
       await this.props.fetchTitlesFromAPI();
     }
   }
+
+  vote(direction, id) {
+    console.log("wowww")
+    this.props.sendVoteToAPI(id, direction)
+  }
+
   render() {
     console.log("props in postlist", this.props)
     return (
@@ -30,8 +37,10 @@ class PostList extends Component {
               </div>
               <div className="card-footer">
                 <small>{title.votes} votes</small>
-                <i className="fas fa-thumbs-up text-success ml-2" />
-                <i className="fas fa-thumbs-down text-danger ml-2" />
+                <i className="fas fa-thumbs-up text-success ml-2"
+                  onClick={() => this.vote("up", title.id)} />
+                <i className="fas fa-thumbs-down text-danger ml-2"
+                  onClick={() => this.vote("down", title.id)} />
               </div>
             </div>
           </div>
@@ -50,7 +59,7 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { fetchTitlesFromAPI }
+  { fetchTitlesFromAPI, sendVoteToAPI }
 )(PostList);
 
 {/* <img className="dogPic" src={title.dog_pic} /> */ }

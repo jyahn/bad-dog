@@ -1,6 +1,7 @@
 import {
   FETCH_TITLES,
-  ADD_POST
+  ADD_POST,
+  VOTE
 } from "../actions/types";
 
 
@@ -16,6 +17,9 @@ export default function rootReducer(state = [], action) {
 
     case ADD_POST:
       return [...state, makeTitleFromPost(action.post)];
+
+    case VOTE:
+      return state.map(title => title.id === action.postId ? { ...title, votes: action.votes } : title);
 
     default:
       return state;

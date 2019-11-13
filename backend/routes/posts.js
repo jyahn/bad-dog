@@ -43,7 +43,7 @@ router.get("/", async function (req, res, next) {
  * =>   { id,
  *        title,
  *        description,
- *        body,
+ *        dog_pic,
  *        votes,
  *        comments: [ { id, text }, ... ],
  *      }
@@ -55,7 +55,7 @@ router.get("/:id", async function (req, res, next) {
       `SELECT p.id,
               p.title,
               p.description,
-              p.body,
+              p.dog_pic,
               p.votes,
               CASE WHEN COUNT(c.id) = 0 THEN JSON '[]' ELSE JSON_AGG(
                     JSON_BUILD_OBJECT('id', c.id, 'text', c.text)
@@ -96,7 +96,7 @@ router.post("/:id/vote/:direction", async function (req, res, next) {
 
 /** POST /     add a new post
  *
- * { title, description, body }  =>  { id, title, description, body, votes }
+ * { title, description, dog_pic }  =>  { id, title, description, dog_pic, votes }
  *
  */
 

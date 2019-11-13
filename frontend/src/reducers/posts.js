@@ -1,6 +1,7 @@
 import {
   ADD_POST,
-  FETCH_POST
+  FETCH_POST,
+  ADD_COMMENT
 } from '../actions/types';
 
 export default function rootReducer(state = {}, action) {
@@ -12,6 +13,12 @@ export default function rootReducer(state = {}, action) {
 
     case ADD_POST:
       return { ...state, [action.post.id]: { ...action.post, comments: [] } };
+
+    case ADD_COMMENT:
+      return {
+        ...state,
+        [action.postId]: { ...state[action.postId], comments: [...state[action.postId].comments, action.comment] }
+      };
 
     default:
       return state;

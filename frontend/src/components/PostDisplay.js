@@ -27,7 +27,7 @@ class PostDisplay extends Component {
             <i className="fas fa-thumbs-down text-danger ml-2" />
           </div>
         </div>
-        <br/>
+        <br />
         <div className="PostDisplay-right">
           <div className="PostDisplay-edit-area">
             <i className="fas fa-edit text-primary"

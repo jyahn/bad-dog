@@ -1,7 +1,8 @@
 import axios from "axios";
 import {
   ADD_POST,
-  FETCH_POST
+  FETCH_POST,
+  ADD_COMMENT
 } from './types';
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api/posts";
@@ -37,4 +38,16 @@ function addPost(post) {
     type: ADD_POST,
     post
   };
+}
+
+
+export function sendCommentToAPI(postId, text) {
+  return async function (dispatch) {
+    const result = await axios.post(`${API_URL}/${postId}/comments/`, { text });
+    return dispatch(addComment(postId, result.data));
+  };
+}
+
+function addComment(postId, comment) {
+  return { type: ADD_COMMENT, postId, comment };
 }

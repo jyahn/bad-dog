@@ -1,26 +1,30 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import {
-  getPostFromAPI
+  getPostFromAPI,
+  sendCommentToAPI
 } from '../actions/posts';
-import PostDisplay from '../components/PostDisplay'
+import PostDisplay from '../components/PostDisplay';
+import CommentList from '../components/CommentList';
+import CommentForm from '../components/CommentForm';
 
 
 class Post extends Component {
   constructor(props) {
     super(props);
 
+    this.addComment = this.addComment.bind(this);
   }
 
   async componentDidMount() {
-    console.log("am i in here")
     if (!this.props.post) {
       await this.props.getPostFromAPI(this.props.id);
     }
-    console.log("what about now")
   }
 
-
+  addComment(text) {
+    this.props.sendCommentToAPI(this.props.post.id, text);
+  }
 
   render() {
     const post = this.props.post;
@@ -28,8 +32,12 @@ class Post extends Component {
     console.log("props in post container", this.props)
     return (
       <div className="Post">
-        <PostDisplay post={post}
-        />
+        <PostDisplay post={post} />
+        <section>
+          <h4>Comments</h4>
+          <CommentList comments={post.comments} />
+          <CommentForm addComment={this.addComment} />
+        </section>
       </div>
     );
   }
@@ -48,6 +56,7 @@ function mapStateToProps(state, props) {
 export default connect(
   mapStateToProps,
   {
-    getPostFromAPI
+    getPostFromAPI,
+    sendCommentToAPI
   }
 )(Post);

@@ -1,7 +1,8 @@
 import {
   ADD_POST,
   FETCH_POST,
-  ADD_COMMENT
+  ADD_COMMENT,
+  REMOVE_COMMENT
 } from '../actions/types';
 
 export default function rootReducer(state = {}, action) {
@@ -18,6 +19,14 @@ export default function rootReducer(state = {}, action) {
       return {
         ...state,
         [action.postId]: { ...state[action.postId], comments: [...state[action.postId].comments, action.comment] }
+      };
+
+    case REMOVE_COMMENT:
+      return {
+        ...state,
+        [action.postId]: {
+          ...state[action.postId], comments: state[action.postId].comments.filter(c => c.id !== action.commentId)
+        }
       };
 
     default:

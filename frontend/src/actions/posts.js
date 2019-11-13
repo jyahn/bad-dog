@@ -2,7 +2,8 @@ import axios from "axios";
 import {
   ADD_POST,
   FETCH_POST,
-  ADD_COMMENT
+  ADD_COMMENT,
+  REMOVE_COMMENT
 } from './types';
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api/posts";
@@ -50,4 +51,20 @@ export function sendCommentToAPI(postId, text) {
 
 function addComment(postId, comment) {
   return { type: ADD_COMMENT, postId, comment };
+}
+
+
+export function removeCommentFromAPI(postId, commentId) {
+  return async function (dispatch) {
+    await axios.delete(`${API_URL}/${postId}/comments/${commentId}`);
+    return dispatch(removeComment(postId, commentId));
+  }
+}
+
+function removeComment(postId, commentId) {
+  return {
+    type: REMOVE_COMMENT,
+    postId,
+    commentId
+  }
 }

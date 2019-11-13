@@ -5,10 +5,10 @@ import Routes from './Routes';
 class App extends Component {
   render() {
     return (
-      <Fragment>
+      <div className="App container">
         <Nav />
         <Routes />
-      </Fragment>
+      </div>
     )
   }
 }

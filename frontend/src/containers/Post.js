@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import "./Post.css";
 import { connect } from 'react-redux';
 import {
   getPostFromAPI,
-  sendCommentToAPI
+  sendCommentToAPI,
+  removeCommentFromAPI
 } from '../actions/posts';
 import PostDisplay from '../components/PostDisplay';
 import CommentList from '../components/CommentList';
@@ -14,6 +16,7 @@ class Post extends Component {
     super(props);
 
     this.addComment = this.addComment.bind(this);
+    this.deleteComment = this.deleteComment.bind(this);
   }
 
   async componentDidMount() {
@@ -26,16 +29,21 @@ class Post extends Component {
     this.props.sendCommentToAPI(this.props.post.id, text);
   }
 
+  deleteComment(commentId) {
+    this.props.removeCommentFromAPI(this.props.post.id, commentId);
+  }
+
   render() {
     const post = this.props.post;
     if (!post) return <p>Loading</p>;
     console.log("props in post container", this.props)
+
     return (
       <div className="Post">
         <PostDisplay post={post} />
-        <section>
+        <section className="Post-comments mb-4">
           <h4>Comments</h4>
-          <CommentList comments={post.comments} />
+          <CommentList comments={post.comments} deleteComment={this.deleteComment} />
           <CommentForm addComment={this.addComment} />
         </section>
       </div>
@@ -57,6 +65,7 @@ export default connect(
   mapStateToProps,
   {
     getPostFromAPI,
-    sendCommentToAPI
+    sendCommentToAPI,
+    removeCommentFromAPI
   }
 )(Post);

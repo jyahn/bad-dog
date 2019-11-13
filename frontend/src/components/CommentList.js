@@ -15,7 +15,7 @@ class CommentList extends Component {
   render() {
     return (
       this.props.comments.map(c => (
-        <Comment key={c.id} id={c.id} text={c.text} triggerDelete={this.props.deleteComment} />
+        <Comment key={c.id} id={c.id} text={c.text} deleteComment={this.props.deleteComment} />
       )));
   }
 }

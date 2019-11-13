@@ -15,3 +15,7 @@
 .title {
   word-wrap: break-word;
 }
+
+.grayedThumb {
+  opacity: 0.65;
+}

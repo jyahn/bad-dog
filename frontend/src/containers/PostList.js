@@ -55,9 +55,9 @@ class PostList extends Component {
               </div>
               <div className="card-footer">
                 <small>{title.votes} votes</small>
-                <i className="fas fa-thumbs-up text-success ml-2"
+                <i className={(localStorage.getItem(title.id) === 'down') ? "grayedThumb fas fa-thumbs-up text-success ml-2 " : "fas fa-thumbs-up text-success ml-2"}
                   onClick={() => this.vote("up", title.id)} />
-                <i className="fas fa-thumbs-down text-danger ml-2"
+                <i className={(localStorage.getItem(title.id) === 'up') ? "grayedThumb fas fa-thumbs-down text-danger ml-2" : "fas fa-thumbs-down text-danger ml-2"}
                   onClick={() => this.vote("down", title.id)} />
               </div>
             </div>

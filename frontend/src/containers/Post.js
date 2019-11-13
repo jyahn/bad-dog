@@ -36,7 +36,26 @@ class Post extends Component {
   }
 
   vote(direction) {
-    this.props.sendVoteToAPI(this.props.post.id, direction)
+    let oppDirection;
+    if (direction === 'up') {
+      oppDirection = 'down';
+    } else {
+      oppDirection = 'up';
+    }
+
+    // if user has already voted on this post
+    if (localStorage.getItem(this.props.post.id)) {
+      let previousVote = localStorage.getItem(this.props.post.id);
+      if (previousVote === oppDirection) {
+        this.props.sendVoteToAPI(this.props.post.id, direction)
+        localStorage.removeItem(this.props.post.id)
+      }
+    }
+    //if user has not already voted on this post
+    else {
+      this.props.sendVoteToAPI(this.props.post.id, direction)
+      localStorage.setItem(this.props.post.id, direction)
+    }
   }
 
   render() {

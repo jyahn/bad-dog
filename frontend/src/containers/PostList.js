@@ -15,8 +15,26 @@ class PostList extends Component {
   }
 
   vote(direction, id) {
-    console.log("wowww")
-    this.props.sendVoteToAPI(id, direction)
+    let oppDirection;
+    if (direction === 'up') {
+      oppDirection = 'down';
+    } else {
+      oppDirection = 'up';
+    }
+
+    // if user has already voted on this post
+    if (localStorage.getItem(id)) {
+      let previousVote = localStorage.getItem(id);
+      if (previousVote === oppDirection) {
+        this.props.sendVoteToAPI(id, direction)
+        localStorage.removeItem(id)
+      }
+    }
+    //if user has not already voted on this post
+    else {
+      this.props.sendVoteToAPI(id, direction)
+      localStorage.setItem(id, direction)
+    }
   }
 
   render() {

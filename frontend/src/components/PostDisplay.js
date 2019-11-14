@@ -25,10 +25,12 @@ class PostDisplay extends Component {
             <div className="card-title">
               {title}
             </div>
-            <div className="dogPic" style={{ backgroundImage: `url(${dog_pic})` }} />
-            <div className="card-text">
-              <i>{description}</i>
-            </div>
+            <div className="dogPic" style={{ backgroundImage: `url(${dog_pic})` }} >
+              {/* <div className="card-text"> */}
+              <div className="description mx-auto">
+                {description}
+              </div>
+            </ div>
           </div>
           <div className="card-footer">
             <small>{votes} votes</small>

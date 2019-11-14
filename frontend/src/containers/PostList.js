@@ -48,9 +48,10 @@ class PostList extends Component {
                 <div className="card-title">
                   <Link to={"/" + title.id}>{title.title}</Link>
                 </div>
-                <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} />
-                <div className="card-text">
-                  <i>{title.description}</i>
+                <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} >
+                  <div className="description">
+                    {title.description}
+                  </div>
                 </div>
               </div>
               <div className="card-footer">

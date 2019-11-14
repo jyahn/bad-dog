@@ -106,10 +106,10 @@ main {
   padding: 0;
 }
 
-body {
+/* body {
   background: #74bdb7;
   font: 700 16px 'Montserrat', sans-serif;
-}
+} */
 
 input[type=email],
 input[type=text] {

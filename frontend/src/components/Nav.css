@@ -1,7 +1,32 @@
-nav a { margin-right: 1em; }
+/* nav a { margin-right: 1em; } */
 
-nav a.active { font-weight: bold; }
+/* nav a.active { font-weight: bold; } */
 
-.Nav-paw {
-  font-size: 50px;
+nav {
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.bad-dog-logo {
+  width: 2em;
+}
+
+.logo {
+  color: #00221c;
+}
+
+.navbar-brand {
+  font-family: 'Love Ya Like A Sister';
+  font-size: 3em;
+  color: #00221c;
+}
+
+i {
+  font-size: 2em;
+  color: #00221c;
+}
+
+i:hover {
+  opacity: 50%
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu&display=swap');
+
 .PostDisplay {
   position: relative;
 }
@@ -21,6 +23,6 @@
   text-transform: uppercase;
   /* font-size: 5em; */
   text-shadow: 2px 2px 2px gray;
-  font-family: 'Impact';
+  font-family: 'Gaegu';
   /* margin-top: 50px; */
 }

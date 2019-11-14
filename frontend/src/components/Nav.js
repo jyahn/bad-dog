@@ -8,7 +8,7 @@ class Nav extends Component {
     return (
       <div className="App container">
         <header className="App-header jumbotron mt-2">
-          <h1 className="App-title display-4">Bad Dog!</h1>
+          <h1 className="App-title display-4">Bad Dog! <i className="Nav-paw fas fa-paw"></i></h1>
           <p className="lead">A place to publicly shame your disobedient dogs.</p>
           <nav>
             <NavLink exact to="/">Home</NavLink>

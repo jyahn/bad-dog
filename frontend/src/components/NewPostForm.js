@@ -66,7 +66,7 @@ class NewPostForm extends Component {
             <span>
               <input
                 class="text-body"
-                id="title"
+                id="editform-title"
                 name="title"
                 type="text"
                 placeholder="Title"
@@ -90,7 +90,7 @@ class NewPostForm extends Component {
             <span>
               <input
                 class="text-body"
-                id="city"
+                id="editform-dogpic"
                 name="city"
                 type="text"
                 required

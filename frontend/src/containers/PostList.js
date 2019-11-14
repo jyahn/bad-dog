@@ -40,9 +40,9 @@ class PostList extends Component {
   render() {
     console.log("props in postlist", this.props)
     return (
-      <div className="postContainer row">
+      <div className="PostContainer row">
         {this.props.titles.map(title => (
-          <div key={title.id} className="post col">
+          <div key={title.id} className="post col my-3">
             <div className="card text-center">
               <div className="card-body">
                 <div className="card-title">
@@ -50,7 +50,7 @@ class PostList extends Component {
                 </div>
                 <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} >
                   <div className="description">
-                    {title.description}
+                    {title.description} <i className="PostList-paw fas fa-paw"></i>
                   </div>
                 </div>
               </div>

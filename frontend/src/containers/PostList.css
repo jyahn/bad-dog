@@ -1,4 +1,4 @@
-.postContainer {
+.PostContainer {
   margin: 20px;
 }
 
@@ -25,3 +25,7 @@
   color: white;
   margin-top: 80%;
 } */
+
+.PostList-paw {
+  font-size: 20px;
+}

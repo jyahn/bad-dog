@@ -42,14 +42,14 @@ class PostList extends Component {
     return (
       <div className="PostContainer row">
         {this.props.titles.map(title => (
-          <div key={title.id} className="post col my-3">
+          <div key={title.id} className="post col-lg-5 col-md-4 my-3">
             <div className="card text-center">
               <div className="card-body">
                 <div className="card-title">
                   <Link to={"/" + title.id}>{title.title}</Link>
                 </div>
                 <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} >
-                  <div className="description">
+                  <div className="description px-5">
                     {title.description} <i className="PostList-paw fas fa-paw"></i>
                   </div>
                 </div>

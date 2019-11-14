@@ -1,15 +1,17 @@
 .PostContainer {
   margin: 20px;
+  justify-content: center;
 }
 
 .dogPic {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 0 auto;
+  border-radius: 5%;
 }
 
 .title {
@@ -20,12 +22,20 @@
   opacity: 0.65;
 }
 
-
-/* .description {
-  color: white;
-  margin-top: 80%;
-} */
+/* 
+.description {
+  word-wrap: break-word;
+}  */
 
 .PostList-paw {
   font-size: 20px;
+}
+
+.card-title {
+  width: 400px;
+  margin: auto;
+}
+
+.card {
+  max-width: 800px;
 }

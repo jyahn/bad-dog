@@ -96,12 +96,6 @@ class NewPostForm extends Component {
                 required
               />
             </span>
-            <input
-              class="text-small-uppercase"
-              id="submit"
-              type="submit"
-              value="Subscribe now"
-            />
           </form>
         </main>
 

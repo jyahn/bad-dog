@@ -16,8 +16,16 @@ nav {
   color: #00221c;
 }
 
+.logo:hover {
+  color: #00221c;
+}
+
+.bad-dog-text:hover {
+  opacity: 0.7;
+}
+
 .navbar-brand {
-  font-family: 'Love Ya Like A Sister';
+  font-family: "Love Ya Like A Sister";
   font-size: 3em;
   color: #00221c;
 }
@@ -28,5 +36,5 @@ i {
 }
 
 i:hover {
-  opacity: 50%
+  opacity: 50%;
 }

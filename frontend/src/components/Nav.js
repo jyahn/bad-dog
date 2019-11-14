@@ -9,18 +9,18 @@ class Nav extends Component {
     return (
       <nav className="navbar">
         <NavLink exact to="/">
-          <a className="logo navbar-brand">
+          <a href="#" className="logo navbar-brand">
             <img
               src={require("./bad-dog-logo.png")}
               class="d-inline-block align-top"
               className="bad-dog-logo"
               alt="bad-dog-logo"
             />
-            Bad Dog!
+            <span className = "bad-dog-text">Bad Dog! </span>
           </a>
         </NavLink>
         <NavLink exact to="/new">
-              <i className="new" class="far fa-edit"></i>
+          <i className="new" class="far fa-edit"></i>
         </NavLink>
       </nav>
     );

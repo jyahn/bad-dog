@@ -19,7 +19,7 @@ class PostDisplay extends Component {
   render() {
     const { title, description, dog_pic, votes } = this.props.post;
     return (
-      <div className="PostDisplay">
+      <div className="PostDisplay mb-5">
         <div className = "Post">
           <div className="body">
             <div className="dogPic"

@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Gaegu&display=swap");
 
 .PostContainer {
-  margin: 20px;
+  margin: 40px;
+  justify-content: center;
+}
+
+.Display {
+  margin-top: 40px;
   justify-content: center;
 }
 

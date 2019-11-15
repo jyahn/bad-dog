@@ -40,7 +40,7 @@ class PostList extends Component {
     return (
       <div className="PostContainer row">
         {this.props.titles.map(title => (
-          <div key={title.id} className="post col-lg-5 col-md-4 my-3">
+          <div key={title.id} className="post col-lg-5 col-md-4">
             <div className="Post text-center">
               <div className="body">
                 <Link className = "link" to={"/" + title.id}>

@@ -64,14 +64,17 @@ class Post extends Component {
     console.log("props in post container", this.props)
 
     return (
-      <div className="Post">
-        <PostDisplay post={post} handleVote={this.vote} />
-        <section className="Post-comments mb-4">
-          <h4>Comments</h4>
-          <CommentList comments={post.comments} deleteComment={this.deleteComment} />
-          <CommentForm addComment={this.addComment} />
-        </section>
-      </div>
+      <div className="Display container">
+        <div className="row">
+          <div className="Post col-lg-7 text-center">
+            <PostDisplay post={post} handleVote={this.vote} />
+          </div>
+          <div className="Post-comments col-lg-4 offset-1 text-center">
+            <CommentList comments={post.comments} deleteComment={this.deleteComment} />
+            <CommentForm addComment={this.addComment} />
+          </div>
+        </div>
+      </div >
     );
   }
 }

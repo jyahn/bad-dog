@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Comment from "./Comment"
+import './Comment.css';
 /** CommentList: shows list of comments passed down as props.
  *
  * Comments can be deleted by clicking next to them; this is handled by
@@ -14,9 +15,18 @@ class CommentList extends Component {
 
   render() {
     return (
-      this.props.comments.map(c => (
-        <Comment key={c.id} id={c.id} text={c.text} deleteComment={this.props.deleteComment} />
-      )));
+      <div>
+        <h4 className="Comments-header">Comments</h4>
+        <div className="Comments-list">
+          {this.props.comments.map(c => (
+            <Comment key={c.id}
+              id={c.id}
+              text={c.text}
+              deleteComment={this.props.deleteComment} />
+          ))}
+        </div>
+      </div>
+    );
   }
 }
 

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, } from 'react';
+import './Comment.css';
 
 /** Comment form
  *
@@ -27,7 +28,7 @@ class CommentForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Comment-Form">
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input onChange={this.handleChange}
@@ -38,10 +39,10 @@ class CommentForm extends Component {
               className="form-control"
               value={this.state.text} />
           </div>
-          <button className="btn btn-primary">Add</button>
-
+          <div className="Button text-center">
+            <button className="btn btn-primary ">Add</button>
+          </div>
         </form>
-
       </div>
     );
   }

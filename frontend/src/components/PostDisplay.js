@@ -19,8 +19,8 @@ class PostDisplay extends Component {
   render() {
     const { title, description, dog_pic, votes } = this.props.post;
     return (
-      <div className="PostDisplay text-center">
-        <div className="card col-lg-6 offset-3 text-center">
+      <div className="PostDisplay">
+        <div className="card">
           <div className="card-body">
             <div
               className="dogPic"

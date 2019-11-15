@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '../containers/Post.css'
+import "../containers/Post.css";
 
 class PostDisplay extends Component {
   constructor(props) {
@@ -22,20 +22,37 @@ class PostDisplay extends Component {
       <div className="PostDisplay text-center">
         <div className="card col-lg-6 offset-3 text-center">
           <div className="card-body">
-            <div className="card-title">
-              {title}
-            </div>
-            <div className="dogPic" style={{ backgroundImage: `url(${dog_pic})` }} >
+            <div
+              className="dogPic"
+              style={{ backgroundImage: `url(${dog_pic})` }}
+            >
               {/* <div className="card-text"> */}
               <div className="description mx-auto px-5">
                 {description} <i class="fas fa-paw"></i>
               </div>
-            </ div>
-          </div>
-          <div className="card-footer">
-            <small>{votes} votes</small>
-            <i className="fas fa-thumbs-up text-success ml-2" onClick={this.doVoteUp} />
-            <i className="fas fa-thumbs-down text-danger ml-2" onClick={this.doVoteDown} />
+              <div className="footer">
+                <span className="title-footer">{title}</span>
+                <span className="votes-footer">
+                  <small>{votes} votes</small>
+                  <i
+                    className={
+                      localStorage.getItem(this.props.post.id) === "down"
+                        ? "grayedThumb fas fa-thumbs-up text-success ml-2 "
+                        : "fas fa-thumbs-up text-success ml-2 mt-2"
+                    }
+                    onClick={() => this.doVoteUp("up", title.id)}
+                  />
+                  <i
+                    className={
+                      localStorage.getItem(this.props.post.id) === "up"
+                        ? "grayedThumb fas fa-thumbs-down text-danger ml-2"
+                        : "fas fa-thumbs-down text-danger ml-2 mt-2"
+                    }
+                    onClick={() => this.doVoteDown("down", title.id)}
+                  />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
         <br />

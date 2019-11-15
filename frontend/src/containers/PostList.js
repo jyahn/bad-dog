@@ -1,11 +1,9 @@
 import React, { Component, Fragment } from "react";
-import { connect } from 'react-redux';
-import { fetchTitlesFromAPI } from '../actions/titles';
-import { Link } from 'react-router-dom';
-import './Post.css'
-import { sendVoteToAPI } from '../actions/posts';
-
-
+import { connect } from "react-redux";
+import { fetchTitlesFromAPI } from "../actions/titles";
+import { Link } from "react-router-dom";
+import "./Post.css";
+import { sendVoteToAPI } from "../actions/posts";
 
 class PostList extends Component {
   async componentDidMount() {
@@ -16,29 +14,29 @@ class PostList extends Component {
 
   vote(direction, id) {
     let oppDirection;
-    if (direction === 'up') {
-      oppDirection = 'down';
+    if (direction === "up") {
+      oppDirection = "down";
     } else {
-      oppDirection = 'up';
+      oppDirection = "up";
     }
 
     // if user has already voted on this post
     if (localStorage.getItem(id)) {
       let previousVote = localStorage.getItem(id);
       if (previousVote === oppDirection) {
-        this.props.sendVoteToAPI(id, direction)
-        localStorage.removeItem(id)
+        this.props.sendVoteToAPI(id, direction);
+        localStorage.removeItem(id);
       }
     }
     //if user has not already voted on this post
     else {
-      this.props.sendVoteToAPI(id, direction)
-      localStorage.setItem(id, direction)
+      this.props.sendVoteToAPI(id, direction);
+      localStorage.setItem(id, direction);
     }
   }
 
   render() {
-    console.log("props in postlist", this.props)
+    console.log("props in postlist", this.props);
     return (
       <div className="PostContainer row">
         {this.props.titles.map(title => (
@@ -48,22 +46,39 @@ class PostList extends Component {
                 <div className="card-title">
                   <Link to={"/" + title.id}>{title.title}</Link>
                 </div>
-                <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} >
+                <div
+                  className="dogPic"
+                  style={{ backgroundImage: `url(${title.dog_pic})` }}
+                >
                   <div className="description px-5">
-                    {title.description} <i className="PostList-paw fas fa-paw"></i>
+                    {title.description}{" "}
+                    <i className="PostList-paw fas fa-paw"></i>
                   </div>
+              <div className="footer">
+                <div className="votes-footer text-right">
+                  <small>{title.votes} votes</small>
+                  <i
+                    className={
+                      localStorage.getItem(title.id) === "down"
+                        ? "grayedThumb fas fa-thumbs-up text-success ml-2 "
+                        : "fas fa-thumbs-up text-success ml-2"
+                    }
+                    onClick={() => this.vote("up", title.id)}
+                  />
+                  <i
+                    className={
+                      localStorage.getItem(title.id) === "up"
+                        ? "grayedThumb fas fa-thumbs-down text-danger ml-2"
+                        : "fas fa-thumbs-down text-danger ml-2"
+                    }
+                    onClick={() => this.vote("down", title.id)}
+                  />
                 </div>
               </div>
-              <div className="card-footer">
-                <small>{title.votes} votes</small>
-                <i className={(localStorage.getItem(title.id) === 'down') ? "grayedThumb fas fa-thumbs-up text-success ml-2 " : "fas fa-thumbs-up text-success ml-2"}
-                  onClick={() => this.vote("up", title.id)} />
-                <i className={(localStorage.getItem(title.id) === 'up') ? "grayedThumb fas fa-thumbs-down text-danger ml-2" : "fas fa-thumbs-down text-danger ml-2"}
-                  onClick={() => this.vote("down", title.id)} />
+                </div>
               </div>
             </div>
           </div>
-
         ))}
       </div>
     );
@@ -72,21 +87,24 @@ class PostList extends Component {
 
 function mapStateToProps(state) {
   return {
-    titles: state.titles,
-  }
+    titles: state.titles
+  };
 }
 
-export default connect(
-  mapStateToProps,
-  { fetchTitlesFromAPI, sendVoteToAPI }
-)(PostList);
+export default connect(mapStateToProps, { fetchTitlesFromAPI, sendVoteToAPI })(
+  PostList
+);
 
-{/* <img className="dogPic" src={title.dog_pic} /> */ }
+{
+  /* <img className="dogPic" src={title.dog_pic} /> */
+}
 
-{/* <div key={title.id} className="post col">
+{
+  /* <div key={title.id} className="post col">
   <div className="title">
     <h4>{title.title}</h4>
   </div>
   <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }} />
   <h5>{title.description}</h5>
-</div> */}
+</div> */
+}

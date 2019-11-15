@@ -55,7 +55,8 @@ class PostList extends Component {
                     <i className="PostList-paw fas fa-paw"></i>
                   </div>
                   <div className="footer">
-                    <div className="votes-footer text-right">
+                    <span className="title-footer">{title.title}</span>
+                    <span className="votes-footer">
                       <small>{title.votes} votes</small>
                       <i
                         className={
@@ -73,7 +74,7 @@ class PostList extends Component {
                         }
                         onClick={() => this.vote("down", title.id)}
                       />
-                    </div>
+                    </span>
                   </div>
                 </div>
               </div>

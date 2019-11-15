@@ -69,7 +69,7 @@ class Post extends Component {
           <div className="Post col-lg-7 text-center">
             <PostDisplay post={post} handleVote={this.vote} />
           </div>
-          <div className="Post-comments col-lg-4 offset-1 text-center">
+          <div className="Post-comments col-lg-4 offset-1">
             <CommentList comments={post.comments} deleteComment={this.deleteComment} />
             <CommentForm addComment={this.addComment} />
           </div>

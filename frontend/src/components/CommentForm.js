@@ -29,8 +29,9 @@ class CommentForm extends Component {
   render() {
     return (
       <div className="Comment-Form">
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
+
+        <form className="form" onSubmit={this.handleSubmit}>
+          <div className="input-group">
             <input onChange={this.handleChange}
               id="commentform-text"
               name="text"
@@ -38,11 +39,12 @@ class CommentForm extends Component {
               placeholder="New Comment"
               className="form-control"
               value={this.state.text} />
-          </div>
-          <div className="Button text-center">
-            <button className="btn btn-primary ">Add</button>
+            <span className="Button form-group-btn">
+              <button className="btn btn-primary ">Add</button>
+            </span>
           </div>
         </form>
+
       </div>
     );
   }

@@ -37,7 +37,7 @@ class PostDisplay extends Component {
                   <i
                     className={
                       localStorage.getItem(this.props.post.id) === "down"
-                        ? "grayedThumb fas fa-thumbs-up text-success ml-2 "
+                        ? "grayedThumb fas fa-thumbs-up text-success ml-2 mt-2"
                         : "fas fa-thumbs-up text-success ml-2 mt-2"
                     }
                     onClick={() => this.doVoteUp("up", title.id)}
@@ -45,7 +45,7 @@ class PostDisplay extends Component {
                   <i
                     className={
                       localStorage.getItem(this.props.post.id) === "up"
-                        ? "grayedThumb fas fa-thumbs-down text-danger ml-2"
+                        ? "grayedThumb fas fa-thumbs-down text-danger ml-2 mt-2"
                         : "fas fa-thumbs-down text-danger ml-2 mt-2"
                     }
                     onClick={() => this.doVoteDown("down", title.id)}

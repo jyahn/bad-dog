@@ -3,6 +3,7 @@
   margin-bottom: 1em;
   padding-bottom: 0.5em;
   border-bottom: solid 1px gray;
+  font-family: 'roboto';
 }
 
 .Comment-Form {
@@ -16,4 +17,8 @@
 
 .form {
   width: 100%;
+}
+
+.fa-pencil-alt {
+  font-size: 25px;
 }

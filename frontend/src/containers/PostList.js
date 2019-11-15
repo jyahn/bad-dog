@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { connect } from 'react-redux';
 import { fetchTitlesFromAPI } from '../actions/titles';
 import { Link } from 'react-router-dom';
-import './PostList.css'
+import './Post.css'
 import { sendVoteToAPI } from '../actions/posts';
 
 

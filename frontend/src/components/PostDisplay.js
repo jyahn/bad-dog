@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './PostDisplay.css'
+import '../containers/Post.css'
 
 class PostDisplay extends Component {
   constructor(props) {

@@ -1,3 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu&display=swap');
+
+.PostContainer {
+  margin: 20px;
+  justify-content: center;
+}
+
+.dogPic {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.5));
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+}
+
+.title {
+  word-wrap: break-word;
+}
+
+.grayedThumb {
+  opacity: 0.65;
+}
+
+
+.description {
+  word-wrap: break-word;
+} 
+
+.PostList-paw {
+  font-size: 20px;
+}
+
+.card-title {
+  width: 400px;
+  margin: auto;
+}
+
+.card {
+  max-width: 800px;
+}
+
+
+
+.description {
+  color: white;
+  /* margin-top is controlling the height of our div because our parent div is width and height 100% */
+  margin-top: 70%;
+  margin-bottom: 20%;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px gray;
+  font-family: 'Gaegu';
+  max-height: 30px;
+}
+
+
 .Post-comments {
   margin-top: 2em;
   padding-top: 0.5em;

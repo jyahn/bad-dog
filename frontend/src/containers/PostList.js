@@ -47,7 +47,7 @@ class PostList extends Component {
                   <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }}>
                     <div className="description px-5">
                       {title.description}{" "}
-                      <i className="PostList-paw fas fa-paw"></i>
+                      <i className="fas fa-paw"></i>
                     </div>
                   </div>
                 </Link>

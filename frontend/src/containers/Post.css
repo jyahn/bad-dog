@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Gaegu&display=swap");
 
 .PostContainer {
-  margin: 40px;
+  margin-top: 100px;
   justify-content: center;
 }
 
 .Display {
-  margin-top: 40px;
+  margin-top: 100px;
   justify-content: center;
 }
 
@@ -27,7 +27,7 @@
   background-position: center;
   margin: 0 auto;
   border-radius: 0.5em;
-  box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 7px 43px -21px rgba(0,34,28,0.83);
 }
 
 .title {
@@ -43,7 +43,7 @@
   /* text-decoration: none; */
 }
 
-.PostList-paw {
+.fa-paw {
   font-size: 20px;
 }
 
@@ -70,7 +70,6 @@
 
 .footer {
   background-color: rgba(255, 255, 255, 0.4);
-  height: 3em;
   z-index: 1;
   position: absolute;
   margin: 0 auto;
@@ -83,9 +82,18 @@
 .title-footer {
   float: left;
   margin-left: 10px;
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0,0,0,1);
+  font-size: 1.5rem;
+  font-family:Lato;
+  max-width: 75%;
 }
 
 .votes-footer {
   float: right;
   margin-right: 10px;
+}
+
+.fa-thumbs-up, .fa-thumbs-down {
+  font-size: 1.5rem
 }

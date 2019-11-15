@@ -40,8 +40,58 @@ class NewPostForm extends Component {
               alt="default"
             />
           </div>
+<<<<<<< Updated upstream
           <form className="col-lg-6" onSubmit={this.handleSubmit}>
             <div className="form-group">
+=======
+          <form onSubmit={this.handleSubmit}>
+            {/* <div>
+              <h1>
+              New Bad Dog
+              </h1>
+            </div> */}
+            <span>
+              <input
+                class="text-body"
+                id="editform-title"
+                name="title"
+                type="text"
+                placeholder="Title"
+                required
+                onChange={this.handleChange}
+                value={this.state.title}
+              />
+            </span>
+            <span>
+              <input
+                class="text-body"
+                id="editform-description"
+                name="description"
+                type="text"
+                placeholder="I'm a bad dog because"
+                required
+                onChange={this.handleChange}
+                value={this.state.description}
+              />
+            </span>
+            <span>
+              <input
+                class="text-body"
+                id="editform-dogpic"
+                name="dog_pic"
+                type="url"
+                className="form-control"
+              />
+            </span>
+          </form>
+        </main>
+
+        <div className="text-center">
+          <h1>New Bad Dog</h1>
+          <form className="col-lg-6 offset-3" onSubmit={this.handleSubmit}>
+            {/* <div className="form-group">
+              <label htmlFor="editform-title">Title:</label>
+>>>>>>> Stashed changes
               <input
                 onChange={this.handleChange}
                 id="editform-title"

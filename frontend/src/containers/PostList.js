@@ -43,7 +43,7 @@ class PostList extends Component {
           <div key={title.id} className="post col-lg-5 col-md-4">
             <div className="Post text-center">
               <div className="body">
-                <Link className = "link" to={"/" + title.id}>
+                <Link className="link" to={"/" + title.id}>
                   <div className="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }}>
                     <div className="description px-5">
                       {title.description}{" "}

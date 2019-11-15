@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./NewPostForm.css";
+// import "./bad-dog-logo.png";
 
 class NewPostForm extends Component {
   static defaultProps = {
@@ -29,122 +30,61 @@ class NewPostForm extends Component {
 
   render() {
     return (
-      <>
-        <main>
-          <figure>
-            <picture>
-              <source
-                media="(min-width: 768px)"
-                srcset="//my-assets.netlify.com/codepen/dailyui-001/img.png     340w,
-                            //my-assets.netlify.com/codepen/dailyui-001/img@2x.png  680w,
-                            //my-assets.netlify.com/codepen/dailyui-001/img@3x.png 1020w"
-                sizes="360px"
-              />
-              <source
-                srcset="//my-assets.netlify.com/codepen/dailyui-001/img-small.png     340w,
-                            //my-assets.netlify.com/codepen/dailyui-001/img-small@2x.png  680w,
-                            //my-assets.netlify.com/codepen/dailyui-001/img-small@3x.png 1020w"
-                sizes="(min-width: 320px) 290px,
-                            (min-width: 480px) 435px
-                            (min-width: 640px) 580px"
-              />
-              <img
-                src="//my-assets.netlify.com/codepen/dailyui-001/img.png"
-                alt="Citymap illustration"
-              />
-            </picture>
-          </figure>
-          <div className="headline">
-            <h2 class="text-headline">Vino Blanco</h2>
+      <div className="container">
+        <div className="row">
+          <div className="image-container col-lg-6 col-md-4 mb-5">
+            {/* <div className="image" style={{ backgroundImage: require("bad-dog-logo.png")}}></div> */}
+            <img
+              className="image"
+              src="https://www.rover.com/blog/wp-content/uploads/2017/10/bad-dogs-or-bored-dogs-dogshaming-HERO-960x540.jpg"
+              alt="default"
+            />
           </div>
-          <form onSubmit={this.handleSubmit}>
-            {/* <div>
-              <h1>
-              New Bad Dog
-              </h1>
-            </div> */}
-            <span>
-              <input
-                class="text-body"
-                id="editform-title"
-                name="title"
-                type="text"
-                placeholder="Title"
-                required
-                onChange={this.handleChange}
-                value={this.state.title}
-              />
-            </span>
-            <span>
-              <input
-                class="text-body"
-                id="editform-description"
-                name="description"
-                type="text"
-                placeholder="I'm a bad dog because"
-                required
-                onChange={this.handleChange}
-                value={this.state.description}
-              />
-            </span>
-            <span>
-              <input
-                class="text-body"
-                id="editform-dogpic"
-                name="city"
-                type="text"
-                required
-              />
-            </span>
-          </form>
-        </main>
-
-        <div className="text-center">
-          <h1>New Bad Dog</h1>
-          <form className="col-lg-6 offset-3" onSubmit={this.handleSubmit}>
-            {/* <div className="form-group">
-              <label htmlFor="editform-title">Title:</label>
+          <form className="col-lg-6" onSubmit={this.handleSubmit}>
+            <div className="form-group">
               <input
                 onChange={this.handleChange}
                 id="editform-title"
                 name="title"
+                placeholder="TITLE"
                 className="form-control"
                 value={this.state.title}
               />
-            </div> */}
-
-            {/* <div className="form-group">
-              <label htmlFor="editform-description">
-                I'm a bad dog because:
-              </label>
-              <input
-                onChange={this.handleChange}
-                id="editform-description"
-                name="description"
-                className="form-control"
-                value={this.state.description}
-              />
-            </div> */}
+            </div>
 
             <div className="form-group">
-              <label htmlFor="editform-dogpic">Image:</label>
+              {/* <label htmlFor="editform-description">
+                I'm a bad dog because:
+              </label> */}
+              <input
+                onChange={this.handleChange}
+                id="editform-description"
+                name="description"
+                className="form-control"
+                placeholder="I'M A BAD DOG BECAUSE"
+                value={this.state.description}
+              />
+            </div>
+
+            <div className="form-group">
+              {/* <label htmlFor="editform-dogpic">Image:</label> */}
               <input
                 onChange={this.handleChange}
                 id="editform-dogpic"
                 name="dog_pic"
                 type="url"
+                placeholder="IMAGE"
                 className="form-control"
                 value={this.state.dog_pic}
               />
             </div>
-
-            <button className="btn btn-primary mr-2">Save</button>
-            <button onClick={this.props.cancel} className="btn btn-secondary">
-              Cancel
-            </button>
+              <button className="btn btn-primary mr-2">Create</button>
+              <button onClick={this.props.cancel} className="btn btn-secondary">
+                Cancel
+              </button>
           </form>
         </div>
-      </>
+      </div>
     );
   }
 }

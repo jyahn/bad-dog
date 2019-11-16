@@ -19,7 +19,7 @@
 }
 
 .dogPic {
-  width: 100%;
+  width: 80%;
   height: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -52,19 +52,10 @@
   font-size: 20px;
 }
 
-.card-title {
-  width: 400px;
-  margin: auto;
-}
-
-.card {
-  max-width: 800px;
-}
-
 .description {
   color: white;
   /* margin-top is controlling the height of our div because our parent div is width and height 100% */
-  margin-top: 70%;
+  margin-top: 60%;
   margin-bottom: 20%;
   font-size: 2em;
   text-transform: uppercase;
@@ -79,16 +70,19 @@
   z-index: 1;
   position: absolute;
   margin: 0 auto;
-  text-align: center;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* justify-content: center; */
+  /* text-align: center; */
   line-height: 45px;
   /* bottom: 0; */
-  left: auto;
-  width: 100%;
+  /* left: 50%; */
+  width: 80%;
   border-radius: 0.5em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
-.title-footer {
+/* .title-footer {
   float: left;
   margin-left: 10px;
   color: white;
@@ -96,7 +90,7 @@
   font-size: 1.5rem;
   font-family:Lato;
   max-width: 75%;
-}
+} */
 
 .votes-footer {
   float: right;
@@ -111,3 +105,8 @@
 .Post-main {
   margin-bottom: 65px;
 }
+
+
+/* .Post-Footer {
+  text-align: center;
+} */

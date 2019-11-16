@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import "./bad-dog-logo.png";
+import logo from "./bad-dog-logo.png";
 
 import "./Nav.css";
 
@@ -11,12 +11,12 @@ class Nav extends Component {
         <NavLink exact to="/">
           <a href="#" className="logo navbar-brand">
             <img
-              src={require("./bad-dog-logo.png")}
+              src={logo}
               class="d-inline-block align-top"
               className="bad-dog-logo"
               alt="bad-dog-logo"
             />
-            <span className = "bad-dog-text">Bad Dog! </span>
+            <span className="bad-dog-text">Bad Dog! </span>
           </a>
         </NavLink>
         <NavLink exact to="/new">

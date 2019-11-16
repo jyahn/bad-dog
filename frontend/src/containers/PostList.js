@@ -54,6 +54,10 @@ class PostList extends Component {
                   </div>
                 </Link>
                 <div className="footer">
+                  <div className="comments-footer my-2 ml-3">
+                    <i class="fas fa-comment-alt" />
+                    <span className = "ml-3">Comments</span>
+                  </div>
                   <span className="votes-footer">
                     <small>{title.votes} votes</small>
                     <i className={

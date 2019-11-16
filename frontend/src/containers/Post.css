@@ -121,3 +121,13 @@
 /* .Post-Footer {
   text-align: center;
 } */
+
+.fa-comment-alt {
+  color: #016036;
+  /* float: left; */
+  font-size: 30px;
+}
+
+.comments-footer {
+  float: left;
+}

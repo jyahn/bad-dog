@@ -40,7 +40,7 @@ class PostList extends Component {
     return (
       <div className="PostContainer row">
         {this.props.titles.map(title => (
-          <div key={title.id} className="post col-lg-5 col-md-4 my-3">
+          <div key={title.id} className="post col-lg-5 col-md-10 col-sm-10 mb-5">
             <div className="Post text-center">
               <div className="body">
                 <Link className="link" to={"/" + title.id}>
@@ -52,7 +52,6 @@ class PostList extends Component {
                   </div>
                 </Link>
                 <div className="footer">
-                  <span className="title-footer">{title.title}</span>
                   <span className="votes-footer">
                     <small>{title.votes} votes</small>
                     <i className={

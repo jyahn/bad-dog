@@ -74,14 +74,18 @@
 }
 
 .footer {
-  background-color: rgba(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 1); */
+  background-color: #f0f6f0;
   z-index: 1;
   position: absolute;
   margin: 0 auto;
   text-align: center;
-  bottom: 0;
+  line-height: 45px;
+  /* bottom: 0; */
   left: auto;
   width: 100%;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
 .title-footer {
@@ -101,4 +105,9 @@
 
 .fa-thumbs-up, .fa-thumbs-down {
   font-size: 1.5rem
+}
+
+
+.Post-main {
+  margin-bottom: 65px;
 }

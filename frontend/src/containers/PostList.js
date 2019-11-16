@@ -40,9 +40,9 @@ class PostList extends Component {
     return (
       <div className="PostContainer row">
         {this.props.titles.map(title => (
-          <div key={title.id} className="post col-lg-5 col-md-10 col-sm-10 mb-5">
+          <div key={title.id} className="Post-main col-lg-5 col-md-10 col-sm-10">
             <div className="Post text-center">
-              <div className="body">
+              <div className="Post-Footer body">
                 <Link className="link" to={"/" + title.id}>
                   <div className="dogPic" id="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }}>
                     <div className="description px-5">

@@ -44,7 +44,9 @@ class PostList extends Component {
             <div className="Post text-center">
               <div className="Post-Footer body">
                 <Link className="link" to={"/" + title.id}>
-                  <div className="dogPic" id="dogPic" style={{ backgroundImage: `url(${title.dog_pic})` }}>
+                  <div className="dogPic"
+                    id="dogPic"
+                    style={{ backgroundImage: `url(${title.dog_pic})` }}>
                     <div className="description px-5">
                       {title.description}{" "}
                       <i className="fas fa-paw"></i>

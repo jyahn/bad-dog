@@ -20,16 +20,16 @@ class PostDisplay extends Component {
     const { title, description, dog_pic, votes } = this.props.post;
     return (
       <div className="PostDisplay mb-5">
-        <div className = "Post">
+        <div className="Post">
           <div className="body">
             <div className="dogPic"
+              id="dogPicSolo"
               style={{ backgroundImage: `url(${dog_pic})` }}>
               <div className="description mx-auto px-5">
                 {description} <i class="fas fa-paw"></i>
               </div>
             </div>
-            <div className="footer">
-              <span className="title-footer">{title}</span>
+            <div className="footer" id="footer">
               <span className="votes-footer">
                 <small>{votes} votes</small>
                 <i className={

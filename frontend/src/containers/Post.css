@@ -19,7 +19,7 @@
 }
 
 .dogPic {
-  width: 80%;
+  width: 85%;
   height: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -31,6 +31,12 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.05);
 
 }
+
+#dogPicSolo {
+  width: 100%;
+}
+
+
 #dogPic:hover {
   box-shadow: 0px 7px 43px -21px rgba(0,34,28,0.83);
 }
@@ -68,8 +74,9 @@
   /* background-color: rgba(255, 255, 255, 1); */
   background-color: #f0f6f0;
   z-index: 1;
-  position: absolute;
+  /* position: absolute; */
   margin: 0 auto;
+  height: 50px;
   /* margin-left: auto;
   margin-right: auto; */
   /* justify-content: center; */
@@ -77,9 +84,13 @@
   line-height: 45px;
   /* bottom: 0; */
   /* left: 50%; */
-  width: 80%;
+  width: 85%;
   border-radius: 0.5em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+#footer{
+  width: 100%;
 }
 
 /* .title-footer {

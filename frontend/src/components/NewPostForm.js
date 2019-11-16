@@ -78,10 +78,12 @@ class NewPostForm extends Component {
                 value={this.state.dog_pic}
               />
             </div>
+            <div className = "buttons">
               <button className="btn btn-primary mr-2">Create</button>
               <button onClick={this.props.cancel} className="btn btn-secondary">
                 Cancel
               </button>
+            </div>
           </form>
         </div>
       </div>

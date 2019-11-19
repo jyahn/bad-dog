@@ -25,11 +25,18 @@ router.get("/", async function (req, res, next) {
               p.title,
               p.description,
               p.dog_pic,
-              p.votes
+              p.votes,
+              CASE WHEN COUNT(c.id) = 0 THEN JSON '[]' ELSE JSON_AGG(
+                JSON_BUILD_OBJECT('id', c.id, 'text', c.text)
+            ) END AS comments
       FROM posts p 
+      LEFT JOIN comments c ON c.post_id = p.id
+  
+      GROUP BY p.id    
       ORDER BY p.id
       `
     );
+    console.log("wtf", result.rows);
     return res.json(result.rows);
   } catch (err) {
     return next(err);

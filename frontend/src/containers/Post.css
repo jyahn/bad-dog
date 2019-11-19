@@ -45,13 +45,35 @@
   word-wrap: break-word;
 }
 
-.grayedThumb {
+/* .grayedThumb {
   opacity: 0.65;
-}
+} */
 
 .description {
   word-wrap: break-word;
   /* text-decoration: none; */
+}
+
+.heart{
+  top: 0;
+  right: 10%;
+  position: absolute;
+  z-index: 2;
+  text-shadow: 2px 2px 2px gray;
+  color: #016036;
+}
+
+.votes {
+  font-size: 1.5em;
+  color: white;
+}
+
+.fa-heart{
+  color: #016036;
+  /* color: #f0f6f0; */
+}
+.fa-heart:hover{
+  opacity: 1;
 }
 
 .fa-paw {

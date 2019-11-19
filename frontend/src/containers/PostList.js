@@ -12,28 +12,46 @@ class PostList extends Component {
     }
   }
 
-  vote(direction, id) {
-    let oppDirection;
-    if (direction === "up") {
-      oppDirection = "down";
-    } else {
-      oppDirection = "up";
-    }
+  // vote(direction, id) {
+  //   let oppDirection;
+  //   if (direction === "up") {
+  //     oppDirection = "down";
+  //   } else {
+  //     oppDirection = "up";
+  //   }
+
+  //   // if user has already voted on this post
+  //   if (localStorage.getItem(id)) {
+  //     let previousVote = localStorage.getItem(id);
+  //     if (previousVote === oppDirection) {
+  //       this.props.sendVoteToAPI(id, direction);
+  //       localStorage.removeItem(id);
+  //     }
+  //   }
+  //   //if user has not already voted on this post
+  //   else {
+  //     this.props.sendVoteToAPI(id, direction);
+  //     localStorage.setItem(id, direction);
+  //   }
+  // }
+
+
+
+  vote(id) {
 
     // if user has already voted on this post
     if (localStorage.getItem(id)) {
-      let previousVote = localStorage.getItem(id);
-      if (previousVote === oppDirection) {
-        this.props.sendVoteToAPI(id, direction);
-        localStorage.removeItem(id);
-      }
+      this.props.sendVoteToAPI(id, "down");
+      localStorage.removeItem(id);
     }
     //if user has not already voted on this post
     else {
-      this.props.sendVoteToAPI(id, direction);
-      localStorage.setItem(id, direction);
+      this.props.sendVoteToAPI(id, "up");
+      localStorage.setItem(id, "up");
     }
   }
+
+
 
   render() {
     console.log("props in postlist", this.props);
@@ -46,6 +64,17 @@ class PostList extends Component {
           >
             <div className="Post text-center">
               <div className="Post-Footer body">
+                <div class="heart">
+                  <span className="votes">{title.votes}</span>
+                  <i
+                    className={
+                      localStorage.getItem(title.id)
+                        ? "fas fas fa-heart ml-2 mt-2"
+                        : "far fa-heart ml-2 mt-2"
+                    }
+                    onClick={() => this.vote(title.id)}
+                  />
+                </div>
                 <Link className="link" to={"/" + title.id}>
                   <div
                     className="dogPic"
@@ -61,12 +90,12 @@ class PostList extends Component {
                   <Link className="link" to={"/" + title.id}>
                     <div className="comments-footer my-2 ml-3">
                       <i class="far fa-comment-alt"></i>
-                      <span className="comments-text ml-3">Comments</span>
+                      <span className="comments-text ml-3">{title.comments.length} Comments</span>
                     </div>
                   </Link>
                   <span className="votes-footer">
-                    <small>{title.votes} votes</small>
-                    <i
+                    <small>{title.votes} votes </small>
+                    {/* <i
                       className={
                         localStorage.getItem(title.id) === "down"
                           ? "grayedThumb fas fa-thumbs-up text-success ml-2 mt-2"
@@ -81,7 +110,7 @@ class PostList extends Component {
                           : "fas fa-thumbs-down text-danger ml-2 mt-2"
                       }
                       onClick={() => this.vote("down", title.id)}
-                    />
+                    /> */}
                   </span>
                 </div>
               </div>

@@ -40,7 +40,7 @@ class CommentForm extends Component {
               className="form-control"
               value={this.state.text} />
             <span className="Button form-group-btn">
-              <button className="btn"><i class="fas fa-pencil-alt"></i></button>
+              <button className="btn"><i class="fas fa-chevron-circle-right"></i></button>
             </span>
           </div>
         </form>

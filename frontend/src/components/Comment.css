@@ -19,6 +19,12 @@
   width: 100%;
 }
 
-.fa-pencil-alt {
+.fa-chevron-circle-right {
   font-size: 25px;
+  color: #016036
+}
+
+.btn:focus,.btn:active {
+  outline: none;
+  box-shadow: none;
 }

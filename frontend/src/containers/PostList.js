@@ -40,38 +40,46 @@ class PostList extends Component {
     return (
       <div className="PostContainer row">
         {this.props.titles.map(title => (
-          <div key={title.id} className="Post-main col-lg-5 col-md-10 col-sm-10">
+          <div
+            key={title.id}
+            className="Post-main col-lg-5 col-md-10 col-sm-10"
+          >
             <div className="Post text-center">
               <div className="Post-Footer body">
                 <Link className="link" to={"/" + title.id}>
-                  <div className="dogPic"
+                  <div
+                    className="dogPic"
                     id="dogPic"
-                    style={{ backgroundImage: `url(${title.dog_pic})` }}>
+                    style={{ backgroundImage: `url(${title.dog_pic})` }}
+                  >
                     <div className="description px-5">
-                      {title.description}{" "}
-                      <i className="fas fa-paw"></i>
+                      {title.description} <i className="fas fa-paw"></i>
                     </div>
                   </div>
                 </Link>
                 <div className="footer">
-                  <div className="comments-footer my-2 ml-3">
-                    <i class="fas fa-comment-alt" />
-                    <span className = "ml-3">Comments</span>
-                  </div>
+                  <Link className="link" to={"/" + title.id}>
+                    <div className="comments-footer my-2 ml-3">
+                      <i class="far fa-comment-alt"></i>
+                      <span className="comments-text ml-3">Comments</span>
+                    </div>
+                  </Link>
                   <span className="votes-footer">
                     <small>{title.votes} votes</small>
-                    <i className={
-                      localStorage.getItem(title.id) === "down"
-                        ? "grayedThumb fas fa-thumbs-up text-success ml-2 mt-2"
-                        : "fas fa-thumbs-up text-success ml-2 mt-2"
-                    }
+                    <i
+                      className={
+                        localStorage.getItem(title.id) === "down"
+                          ? "grayedThumb fas fa-thumbs-up text-success ml-2 mt-2"
+                          : "fas fa-thumbs-up text-success ml-2 mt-2"
+                      }
                       onClick={() => this.vote("up", title.id)}
                     />
-                    <i className={
-                      localStorage.getItem(title.id) === "up"
-                        ? "grayedThumb fas fa-thumbs-down text-danger ml-2 mt-2"
-                        : "fas fa-thumbs-down text-danger ml-2 mt-2"
-                    }
+                    <i
+                      className={
+                        localStorage.getItem(title.id) === "up"
+                          ? "grayedThumb fas fa-thumbs-down text-danger ml-2 mt-2"
+                          : "fas fa-thumbs-down text-danger ml-2 mt-2"
+                      }
                       onClick={() => this.vote("down", title.id)}
                     />
                   </span>

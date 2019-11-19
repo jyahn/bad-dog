@@ -94,7 +94,7 @@ class PostList extends Component {
                     </div>
                   </Link>
                   <span className="votes-footer">
-                    <small>{title.votes} votes </small>
+                    {/* <small>{title.votes} votes </small> */}
                     {/* <i
                       className={
                         localStorage.getItem(title.id) === "down"

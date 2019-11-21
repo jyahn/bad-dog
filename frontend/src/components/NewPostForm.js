@@ -27,7 +27,11 @@ class NewPostForm extends Component {
   3
   handleSubmit(evt) {
     evt.preventDefault();
-    this.props.addPost(this.state);
+    if (this.state.description !== '' && this.state.dog_pic !== '') {
+      this.props.addPost(this.state);
+    }else {
+      alert('Please enter a valid picture and caption')
+    }
   }
 
   previewFile = (event) => {
@@ -41,6 +45,7 @@ class NewPostForm extends Component {
   }
 
   render() {
+    console.log("props in newpostform", this.props)
     return (
       <div className="container">
         <div className="col-lg-8 offset-2">

@@ -178,32 +178,3 @@
 .fav:hover {
   background-position: right;
 }
-
-.fa-heart {
-  background-image: url("https://cssanimation.rocks/images/posts/steps/heart.png");
-  background-size: auto 50px;
-  height: 50px;
-  width: 50px;
-}
-.fa-heart.is-animating {
-  -webkit-animation: zoetrope 0.8s steps(28) 1;
-          animation: zoetrope 0.8s steps(28) 1;
-}
-
-@-webkit-keyframes zoetrope {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
-}
-
-@keyframes zoetrope {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
-}

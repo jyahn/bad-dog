@@ -7,7 +7,7 @@ import {
   VOTE
 } from './types';
 
-const API_URL = `${process.env.REACT_APP_API_URL}/api/posts` || "http://localhost:5000/api/posts";
+const API_URL = `${process.env.REACT_APP_BASE_URL}/api/posts` || "http://localhost:5000/api/posts";
 
 
 export function getPostFromAPI(id) {

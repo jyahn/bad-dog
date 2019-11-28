@@ -2,6 +2,8 @@
 
 Bad Dog! is an anonymous forum for users to post pictures of their guilty (bad) dogs.
 
+Bad Dog! is [live on Heroku](https://baddog-jd.herokuapp.com/).
+
 ## Table of Contents
 
 - [Screenshots](#screenshots)

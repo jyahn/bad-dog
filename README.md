@@ -37,14 +37,9 @@ npm install
 npm start
 ```
 
-### Clone
-
-- Clone this repo to your local machine using `https://github.com/jyahn/bad-dog`
-
-
 ## Features
 
-- Users can create a post of their dog by submitting an image, a title, and a caption (optional)
+- Users can create a post of their dog by submitting an image, a title, and a caption (optional).
 - Users can like posts, comment on posts, and delete comments without creating an account.
 
 

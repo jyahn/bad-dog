@@ -1,6 +1,6 @@
-# Bad Dog 
+# Bad Dog!
 
-My team and I built the frontend for this app using React (CRA setup), Redux, and Redux Thunk. The goal was to create an app that has a fundamentally sound component heirarchy. Another goal was to intelligently connect components to redux to prop drilling
+Bad Dog! is an anonymous forum for users to post pictures of their guilty (bad) dogs.
 
 ## Table of Contents
 
@@ -9,6 +9,12 @@ My team and I built the frontend for this app using React (CRA setup), Redux, an
 - [Technologies](#technologies)
 - [Features to add](#features-to-add)
 - [Team](#team)
+
+## Screenshots
+
+![Alt text](/frontend/public/images/baddog1.png?raw=true "Home")
+![Alt text](/frontend/public/images/baddog2.png?raw=true "Individual post")
+![Alt text](/frontend/public/images/baddog3.png?raw=true "Create a post")
 
 ## Installation
 ### Backend Setup:  
@@ -32,13 +38,12 @@ npm start
 
 - Clone this repo to your local machine using `https://github.com/jyahn/bad-dog`
 
----
 
 ## Features
 
 - Users can create a post of their dog by submitting an image, a title, and a caption (optional)
+- Users can like posts, comment on posts, and delete comments without creating an account.
 
----
 
 ## Technologies
 
@@ -46,16 +51,15 @@ npm start
 - Create-React-App
 - Redux 
 - Redux Thunk
+- Local storage
 - Axios 
 - Bootstrap
 
---- 
 
 ## Features to add
 
 - Add auth to backend for signup/login functionality
 
----
 
 ## Team
 

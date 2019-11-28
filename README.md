@@ -4,6 +4,7 @@ Bad Dog! is an anonymous forum for users to post pictures of their guilty (bad) 
 
 ## Table of Contents
 
+- [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Features](#features)
 - [Technologies](#technologies)
